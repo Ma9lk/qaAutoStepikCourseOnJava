@@ -7,15 +7,18 @@ import static locators.Locators.BasketPageLocators.*;
 
 public class BasketPage extends BasePage {
 
-    public void shouldBeEmptyBasket() {
+    public BasketPage shouldBeEmptyBasket() {
         NOT_EMPTY_BASKET.shouldNotBe(exist);
+        return this;
     }
 
-    public void shouldBeNotEmptyBasket() {
+    public BasketPage shouldBeNotEmptyBasket() {
         NOT_EMPTY_BASKET.shouldBe(exist);
+        return this;
     }
 
-    public void shouldBeTextThatBasketIsEmpty() {
+    public BasketPage shouldBeTextThatBasketIsEmpty() {
         TEXT_ABOUT_EMPTY_BASKET.shouldBe(exist);
+        return this;
     }
 }

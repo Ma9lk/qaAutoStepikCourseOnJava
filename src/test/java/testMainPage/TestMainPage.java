@@ -16,16 +16,20 @@ public class TestMainPage {
 
     @Test
     public void AtestGuestCanGoToLoginPage() {
-        basePage.openPage(MAIN_LINK);
-        basePage.goToLoginPage();
-        loginPage.shouldBeLoginPage();
+        basePage
+                .openPage(MAIN_LINK)
+                .goToLoginPage();
+        loginPage
+                .shouldBeLoginPage();
     }
 
     @Test
     public void BtestGuestCantSeeProductInBasketOpenedFromMainPage() {
-        basePage.openPage(MAIN_LINK);
-        basePage.goToBasketPage();
-        basketPage.shouldBeEmptyBasket();
-        basketPage.shouldBeTextThatBasketIsEmpty();
+        basePage
+                .openPage(MAIN_LINK)
+                .goToBasketPage();
+        basketPage
+                .shouldBeEmptyBasket()
+                .shouldBeTextThatBasketIsEmpty();
     }
 }

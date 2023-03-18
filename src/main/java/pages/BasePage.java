@@ -9,12 +9,14 @@ import static locators.Locators.BasePageLocators.*;
 
 public class BasePage {
 
-    public void openPage(String url) {
+    public BasePage openPage(String url) {
         Selenide.open(url);
+        return this;
     }
 
-    public void goToLoginPage() {
+    public BasePage goToLoginPage() {
         LOGIN_LINK.click();
+        return this;
     }
 
     public void goToBasketPage() {

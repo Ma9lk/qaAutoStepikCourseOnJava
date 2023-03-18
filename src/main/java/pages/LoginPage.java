@@ -6,11 +6,12 @@ import static locators.Locators.LoginPageLocators.*;
 
 public class LoginPage extends BasePage {
 
-    public void registerNewUser(String email, String password) {
+    public LoginPage registerNewUser(String email, String password) {
         REGISTER_FORM_EMAIL.setValue(email);
         REGISTER_FORM_PASSWORD.setValue(password);
         REPEAT_REGISTER_FORM_PASSWORD.setValue(password);
         REGISTRATION_BUTTON.click();
+        return this;
     }
 
     public void shouldBeLoginPage() {
